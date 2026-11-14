@@ -1,77 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="wrapper">
-            <nav >
-                <ul>
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Skill</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </nav>
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premal Kumar Shrestha | Software Developer &amp; AI Enthusiast</title>
+    <meta
+      name="description"
+      content="Portfolio of Premal Kumar Shrestha, Computer Engineering graduate from Nepal, showcasing software development, AI projects, digital solutions, and leadership experience."
+    />
+    <meta name="author" content="Premal Kumar Shrestha" />
+    <link rel="canonical" href="https://premalshrestha.com.np/" />
 
-            <!-- End of nav-->
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Premal Kumar Shrestha" />
+    <meta property="og:title" content="Premal Kumar Shrestha | Software Developer &amp; AI Enthusiast" />
+    <meta
+      property="og:description"
+      content="Portfolio of Premal Kumar Shrestha, Computer Engineering graduate from Nepal, showcasing software development, AI projects, digital solutions, and leadership experience."
+    />
+    <meta property="og:url" content="https://premalshrestha.com.np/" />
 
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Premal Kumar Shrestha | Software Developer &amp; AI Enthusiast" />
+    <meta
+      name="twitter:description"
+      content="Portfolio of Premal Kumar Shrestha, Computer Engineering graduate from Nepal, showcasing software development, AI projects, digital solutions, and leadership experience."
+    />
 
-        </div>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000000' stroke='%2314213D' stroke-width='2'/%3E%3Cpath d='M20 46V18h14c6.6 0 11 3.8 11 9.8S40.6 37.6 34 37.6h-7.5V46H20zm6.5-14h7c3.1 0 5-1.6 5-4.2s-1.9-4.2-5-4.2h-7V32z' fill='%23FCA311'/%3E%3C/svg%3E"
+    />
 
+    <!-- Fonts: Raleway & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Raleway:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-    </header>
-    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Premal Kumar Shrestha",
+        "url": "https://premalshrestha.com.np",
+        "email": "mailto:premalshrestha00@gmail.com",
+        "jobTitle": "Software Developer & AI Enthusiast",
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Kantipur City College, Purbanchal University"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kathmandu",
+          "addressCountry": "NP"
+        },
+        "sameAs": [
+          "https://github.com/Premalshrestha",
+          "https://www.linkedin.com/in/premalshrestha"
+        ]
+      }
+    </script>
 
-    <div class="wrapper">
-        <section>
-            <h1>
-                Hello. 
-            </h1>
-            <p  class="first line">
-                It's Me.
-            </p>
-            
-            <p class="sec line">
-                Pramod Shrestha
-            </p>
-            <p class= " third line">
-                I am a developer
-            </p>
-
-        </section>
-        <div class="photo">
-            <img src="image/error.png" class="photo">
-        </div>
-    </div>
-    <div class="logo">
-        <a href=https://www.facebook.com/pramod.shrestha.2003>
-            <img src="image/fb.png" class="fb"></a>
-        <img src="image/insta.png" class="insta">
-        <img src="image/tweeter.png" class="tweeter">
-    </div>
-    <div class="button">
-        <a href="#" class="button txt"> Download CV </a>
-    </div>
-
-  
-
-
-
-    <script src="main.js"></script>
-    
-</body>
+    <!-- Prevent theme flash before React mounts -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('portfolio-theme');
+          if (saved === 'light') {
+            document.documentElement.classList.remove('dark');
+          } else {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-[#f5f5f5] text-[#14213D] dark:bg-[#000000] dark:text-[#FFFFFF] antialiased selection:bg-[#FCA311]/30 selection:text-[#000000] dark:selection:text-[#FFFFFF]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

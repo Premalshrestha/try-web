@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://premalshrestha.com.np/sitemap.xml
