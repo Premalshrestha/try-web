@@ -23,7 +23,8 @@ type RouteState =
   | { view: 'project-detail'; slug: string };
 
 function parseRoute(pathname: string): RouteState {
-  const normalized = pathname.replace(/\/+$/, '') || '/';
+  const stripped = pathname.replace(/^\/try-web(?=\/|$)/, '') || '/';
+  const normalized = stripped.replace(/\/+$/, '') || '/';
   if (normalized === '/projects') {
     return { view: 'projects-archive' };
   }
@@ -83,8 +84,10 @@ export default function App() {
   }, []);
 
   const navigateTo = useCallback((path: string, nextRoute: RouteState) => {
-    if (window.location.pathname !== path) {
-      window.history.pushState({}, '', path);
+    const prefix = window.location.pathname.startsWith('/try-web') ? '/try-web' : '';
+    const fullPath = `${prefix}${path.startsWith('/') ? path : `/${path}`}`;
+    if (window.location.pathname !== fullPath) {
+      window.history.pushState({}, '', fullPath);
     }
     setRoute(nextRoute);
   }, []);
